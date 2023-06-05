@@ -57,7 +57,7 @@ html, body {
 We're not using alt on svg logo images:
 
 ```HTML
-<img src="images/logo.svg" class="logo" />
+<img src="images/logo.svg" alt="" class="logo" />
 ```
 
 Changed placeholder and focus on input with these CSS selectors and attributes:
