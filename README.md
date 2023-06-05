@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/MikeBeloborodov/tip_calculator_app)
+- Live Site URL: [Netlify](https://comfy-cucurucho-d5d079.netlify.app/)
 
 ## My process
 
