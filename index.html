@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- My styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="Splitter logo" class="logo" />
+    </header>
+    <main>
+      <section class="app">
+        <form>
+          <div class="box bill">
+            <label for="bill" class="form__label">Bill</label>
+            <input type="text" name="bill" id="bill" class="form__input dollar-icon" placeholder="0" />
+          </div>
+          <div class="percent">
+            <label for="custom" class="form__label tip">Select Tip %</label>
+            <div class="percent__box">
+              <button type="button" class="percent__btn">5%</button>
+              <button type="button" class="percent__btn">10%</button>
+              <button type="button" class="percent__btn">15%</button>
+              <button type="button" class="percent__btn">25%</button>
+              <button type="button" class="percent__btn">50%</button>
+              <input
+                type="text"
+                class="form__input custom"
+                name="custom"
+                id="custom"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="box people">
+            <label for="" class="form__label">Number of People</label>
+            <input type="text" name="people" id="people" class="form__input people-icon" placeholder="0" />
+          </div>
+        </form>
+        <div class="results">
+          <div class="results__text-box">
+            <div class="results__text">
+              <p>
+                Tip Amount<span class="results__text-accent">/ person</span>
+              </p>
+              <p class="results__text-money">
+                <span class="results__text-dollar">$</span>0.00
+              </p>
+            </div>
+            <div class="results__text">
+              <p>Total<span class="results__text-accent">/ person</span></p>
+              <p class="results__text-money">
+                <span class="results__text-dollar">$</span>0.00
+              </p>
+            </div>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

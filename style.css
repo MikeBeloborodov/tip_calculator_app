@@ -1,0 +1,269 @@
+/* VARIABLES */
+:root {
+    --clr-strong-cyan: hsl(172, 67%, 45%);
+    --clr-very-dark-cyan: hsl(183, 100%, 15%);
+    --clr-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --clr-grayish-cyan: hsl(184, 14%, 56%);
+    --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+    --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-focus: hsl(172, 67%, 80%);
+    --clr-reset-btn: rgb(13, 104, 109);
+
+    --ff-main: 'Space Mono', monospace;
+
+    --fw-bold: 700;
+}
+
+/* END VARIABLS */
+
+/* RESET DEFAULTS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 1.5em;
+}
+
+body {
+    line-height: 1.5;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    width: 100%;
+}
+
+/* END RESET DEFAULT */
+
+/* STYLES */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-light-grayish-cyan);
+    font-family: var(--ff-main);
+    color: var(--clr-dark-grayish-cyan);
+    padding: 2.5rem 0;
+    font-weight: var(--fw-bold);
+}
+
+.logo {
+    width: 3.8rem;
+    margin: 0 auto 1.5rem;
+}
+
+.app {
+    background-color: var(--clr-white);
+    padding: 1.5rem 2rem;
+    border-top: 1rem;
+    overflow: hidden;
+    display: grid;
+    gap: 1.5rem;
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form__label {
+    display: block;
+    font-size: 0.65rem;
+    margin-bottom: 0.3rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.form__input {
+    border: none;
+    background-color: var(--clr-very-light-grayish-cyan);
+    text-align: end;
+    color: var(--clr-very-dark-cyan);
+    border-radius: 0.2rem;
+    padding: 0.25rem 0.8rem;
+    margin: auto;
+    width: 100%;
+}
+
+.form__input:focus {
+    outline: solid 2px var(--clr-strong-cyan);
+}
+
+.form__input::placeholder {
+    color: var(--clr-very-dark-cyan);
+    opacity: 0.3;
+}
+
+.form__input.custom::placeholder {
+    color: var(--clr-very-dark-cyan);
+    opacity: 0.7;
+}
+
+.form__input:focus::placeholder {
+    color: transparent;
+}
+
+.percent__box {
+    display: grid;
+    place-content: center;
+    gap: 0.75rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.percent__btn {
+    border: none;
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0.25rem;
+    color: var(--clr-white);
+    padding: 0.3rem 0;
+    cursor: pointer;
+}
+
+.custom {
+    padding: 0.3rem 0;
+    text-align: center;
+}
+
+.percent__btn:hover, .percent__btn:focus {
+    background-color: var(--clr-focus);
+    color: var(--clr-very-dark-cyan);
+}
+
+.tip {
+    margin-bottom: 0.9rem;
+}
+
+.results {
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    padding: 1.5rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.results__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results__text{
+    color: var(--clr-light-grayish-cyan);
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.results__text-accent {
+    display: block;
+    color: var(--clr-grayish-cyan);
+    font-size: 0.6rem;
+}
+
+.results__text-money {
+    color: var(--clr-strong-cyan);
+    font-size: 1.43rem;
+}
+
+.reset {
+    border: none;
+    background-color: var(--clr-reset-btn);
+    color: var(--clr-very-dark-cyan);
+    text-transform: uppercase;
+    padding: 0 auto;
+    height: 2rem;
+    border-radius: 0.2rem;
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: var(--clr-focus);
+    color: var(--clr-very-dark-cyan);
+}
+
+.dollar-icon {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 0.7rem 0.6rem;
+}
+
+.people-icon {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 0.7rem 0.6rem;
+}
+
+@media screen and (min-width: 48rem) and (min-height: 30rem) {
+    body {
+        display: grid;
+        place-content: center;
+        padding-top: 3.5rem;
+    }
+
+    .logo {
+        margin-bottom: 3.5rem;
+    }
+
+    .app {
+        grid-template-columns: 1fr 1fr;
+        max-width: 38.5rem;
+        border-radius: 1rem;
+        padding: 2rem 2rem;
+    } 
+
+    .results {
+        justify-content: space-between;
+        padding: 2rem 2rem;
+    }
+
+    .results__text {
+        font-size: 0.67rem;
+    }
+
+    .results__text-money {
+        font-size: 2rem;
+    }
+
+    .percent__box {
+        gap: 0.75rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+/* END STYLES */
