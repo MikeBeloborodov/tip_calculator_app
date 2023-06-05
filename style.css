@@ -9,6 +9,7 @@
     --clr-white: hsl(0, 0%, 100%);
     --clr-focus: hsl(172, 67%, 80%);
     --clr-reset-btn: rgb(13, 104, 109);
+    --clr-warning: rgb(237, 167, 148);
 
     --ff-main: 'Space Mono', monospace;
 
@@ -28,9 +29,8 @@
     margin: 0;
 }
 
-html,
-body {
-    height: 100%;
+html, body {
+    min-height: 100vh;
 }
 
 html {
@@ -91,7 +91,7 @@ body {
 
 form {
     display: grid;
-    gap: 1.5rem;
+    gap: 0.9rem;
 }
 
 .form__label {
@@ -153,14 +153,14 @@ form {
     cursor: pointer;
 }
 
-.custom {
-    padding: 0.3rem 0;
-    text-align: center;
-}
-
 .percent__btn:hover, .percent__btn:focus {
     background-color: var(--clr-focus);
     color: var(--clr-very-dark-cyan);
+}
+
+.custom {
+    padding: 0.3rem 0;
+    text-align: center;
 }
 
 .tip {
@@ -180,9 +180,6 @@ form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.results__text{
     color: var(--clr-light-grayish-cyan);
     font-size: 0.7rem;
     margin-bottom: 0.8rem;
@@ -229,6 +226,37 @@ form {
     background-position: 0.7rem 0.6rem;
 }
 
+.zero-warning {
+    border: 0.1rem solid var(--clr-warning);
+}
+
+.people_label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-btn {
+    background-color: var(--clr-strong-cyan);
+    color: var(--clr-very-dark-cyan);
+}
+
+#zero_span {
+    color: var(--clr-warning);
+    display: none;
+}
+
+/* hide something from screen reader */
+/* https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: insert(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 @media screen and (min-width: 48rem) and (min-height: 30rem) {
     body {
         display: grid;
@@ -240,16 +268,21 @@ form {
         margin-bottom: 3.5rem;
     }
 
+    form {
+        gap: 1.4rem;
+    }
+
     .app {
         grid-template-columns: 1fr 1fr;
         max-width: 38.5rem;
         border-radius: 1rem;
         padding: 2rem 2rem;
+        gap: 2rem;
     } 
 
     .results {
         justify-content: space-between;
-        padding: 2rem 2rem;
+        padding: 2rem 1.5rem;
     }
 
     .results__text {

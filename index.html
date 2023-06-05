@@ -22,14 +22,21 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" alt="Splitter logo" class="logo" />
+      <img src="images/logo.svg" class="logo" />
     </header>
     <main>
+      <h1 class="visually-hidden">Splitter, tip calculator.</h1>
       <section class="app">
         <form>
           <div class="box bill">
             <label for="bill" class="form__label">Bill</label>
-            <input type="text" name="bill" id="bill" class="form__input dollar-icon" placeholder="0" />
+            <input
+              type="text"
+              name="bill"
+              id="bill"
+              class="form__input dollar-icon"
+              placeholder="0"
+            />
           </div>
           <div class="percent">
             <label for="custom" class="form__label tip">Select Tip %</label>
@@ -49,8 +56,16 @@
             </div>
           </div>
           <div class="box people">
-            <label for="" class="form__label">Number of People</label>
-            <input type="text" name="people" id="people" class="form__input people-icon" placeholder="0" />
+            <label for="people" class="form__label people_label"
+              >Number of People<span id="zero_span">Can't be zero</span></label
+            >
+            <input
+              type="text"
+              name="people"
+              id="people"
+              class="form__input people-icon"
+              placeholder="0"
+            />
           </div>
         </form>
         <div class="results">
@@ -60,17 +75,17 @@
                 Tip Amount<span class="results__text-accent">/ person</span>
               </p>
               <p class="results__text-money">
-                <span class="results__text-dollar">$</span>0.00
+                $<span id="tip_amount">0.00</span>
               </p>
             </div>
             <div class="results__text">
               <p>Total<span class="results__text-accent">/ person</span></p>
               <p class="results__text-money">
-                <span class="results__text-dollar">$</span>0.00
+                $<span id="total_amount">0.00</span>
               </p>
             </div>
           </div>
-          <button class="reset">Reset</button>
+          <button class="reset" id="reset">Reset</button>
         </div>
       </section>
     </main>
