@@ -261,7 +261,7 @@ form {
     body {
         display: grid;
         place-content: center;
-        padding-top: 3.5rem;
+        padding-top: 2rem;
     }
 
     .logo {
