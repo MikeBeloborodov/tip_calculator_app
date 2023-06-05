@@ -47,6 +47,10 @@ function get_people_value(e) {
         e.target.value = e.target.value.substring(0, e.target.value.length - 1)
         return;
     }
+    if (check.toString().length > 2) {
+        e.target.value = e.target.value.substring(0, e.target.value.length - 1)
+        return;
+    }
     people_input.value = check;
     people = check;
     if (people) {
