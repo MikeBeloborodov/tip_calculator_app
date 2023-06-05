@@ -106,11 +106,13 @@ function percent_btn_press(e) {
 function set_tip_amount() {
     tip_amount_local = Math.round((((tip_percent / 100) * bill) / people) * 100) / 100;
     tip_amount.textContent = tip_amount_local;
+    tip_amount.textContent = tip_amount.textContent.slice(0, 5);
 }
 
 function set_total_amount() {
     total_amount_local = Math.round((bill / people) * 100) / 100;
-    total_amount.textContent = total_amount_local + tip_amount_local;
+    total_amount.textContent = (total_amount_local + tip_amount_local);
+    total_amount.textContent = (total_amount.textContent).slice(0, 5);
 }
 
 function set_reset_button_active() {
